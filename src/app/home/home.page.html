@@ -1,0 +1,87 @@
+
+<ion-content  class="background" [fullscreen]="true">
+  <br>
+  <br>
+  <ion-segment [(ngModel)]="selectTabs">
+    <ion-segment-button value="recent">
+      <ion-label>LOGIN</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="missed">
+      <ion-label>REGISTER</ion-label>
+    </ion-segment-button>
+   
+  </ion-segment>
+
+  <div>
+    <br>
+    <br>
+    <br>
+  <br>
+  <div *ngIf="selectTabs == 'recent'" class="page" style="display: flex;justify-content: center;flex-direction: row;">
+  
+  <div class="loginCard">
+  <item>
+    <ion-icon slot="start" color="success" name="mail"></ion-icon>
+        <ion-label class="yes" position="floating" style="font-size: 12px;margin-left:10px;color: lightslategrey; " >Email</ion-label>
+        <ion-textarea style="font-family: Comic Sans MS, cursive, sans-serif;box-shadow: 0px 1px#e6e8e9;" ></ion-textarea>
+   
+      </item>
+      <item>
+        <ion-icon slot="start" color="success" name="lock-closed"></ion-icon>
+        <ion-label position="floating" style="font-size: 12px;margin-left:10px ;color: lightslategrey;" >Password</ion-label>
+        <ion-input style="  font-weight:900% ;font-size: 50px;color: black;box-shadow: 0px 1px#e6e8e9;"  type="password"></ion-input>
+        <h2 style="color:lightgreen;font-weight:bold; bottom: -90px; font-size: 12px;display: flex;justify-content: center;"> FORGET PASSWORD?</h2>
+      </item>
+    <div class="buttonWrapper"style="display: flex;justify-content: center;display: flex;justify-content: center;">
+    
+    
+      <ion-button shape="round"color="success" >
+        LOGIN
+      </ion-button>
+    </div>
+    <div class ="face" style="border: 1px solid white; padding: 0px;border-radius: 80px 80px;border-style: dashed;margin-left: 15px;">
+      <ion-button fill="clear" color="light">LOGIN WITH FACE BOOK</ion-button>
+    </div>
+  </div>
+  
+  </div>
+
+  <div *ngIf="selectTabs == 'missed'" class="page" style="display: flex;justify-content: center;flex-direction: row;">
+  
+    <div class="loginCard">
+      
+      <item>
+        <ion-icon slot="start" color="success" name="mail"></ion-icon>
+            <ion-label class="yes" position="floating" style="font-size: 12px;margin-left:10px;color: lightslategrey; " >Email</ion-label>
+            <ion-textarea style="font-family: Comic Sans MS, cursive, sans-serif;box-shadow: 0px 1px#e6e8e9;" ></ion-textarea>
+       
+          </item>
+          <item>
+            <ion-icon slot="start" color="success" name="mail"></ion-icon>
+                <ion-label class="yes" position="floating" style="font-size: 12px;margin-left:10px;color: lightslategrey;  " >Username</ion-label>
+                <ion-textarea style="font-family: Comic Sans MS, cursive, sans-serif;box-shadow: 0px 1px#e6e8e9;" ></ion-textarea>
+           
+              </item>
+          <item>
+            <ion-icon slot="start" color="success" name="lock-closed"></ion-icon>
+            <ion-label position="floating" style="font-size: 12px;margin-left:10px ;color: lightslategrey;" >Password</ion-label>
+            <ion-input style="  font-weight:900% ;font-size: 50px;color: black;box-shadow: 0px 1px#e6e8e9"  type="password"></ion-input>
+           
+          </item>
+      
+      <div class="buttonWrapper"style="display: flex;justify-content: center;">
+      
+        <ion-button shape="round"color="success" >
+          Register
+        </ion-button>
+        <div class ="face" style="border: 1px solid white; padding: 0px;border-radius: 80px 80px;border-style: dashed;margin-left: 15px;">
+          <ion-button fill="clear" color="light">REGISTER WITH FACE BOOK</ion-button>
+        </div>
+      
+    
+      </div>
+    </div>
+    
+    </div>
+  </div>
+</ion-content>
